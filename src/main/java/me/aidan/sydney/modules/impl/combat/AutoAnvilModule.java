@@ -114,6 +114,7 @@ public class AutoAnvilModule extends Module {
     
     @Override
     public String getMetaData() {
-        return target != null ? target.getName().getString() : null;
+        if (target == null) return "";
+        return target.getName().getString();
     }
 }
